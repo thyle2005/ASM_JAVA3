@@ -1,0 +1,204 @@
+@charset "UTF-8";
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #0080c0;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Menu */
+nav {
+    background-color: black;
+    margin: 3px;
+}
+
+nav > div.menuleft {
+    float: left;
+}
+
+nav > div.menuright {
+    float: right;
+}
+
+nav > div > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav > div > ul > li {
+    display: inline-block; /* các mục hiển thị trên cùng một dòng */
+}
+
+nav > div > ul > li > a {
+    text-decoration: none; /* định dạng văn bản bình thường */
+    display: inline-block;
+    margin: 0;
+    padding: 10px 15px; /* khoảng cách giữa các mục */
+    color: white;
+    transition: background-color 0.3s, color 0.3s; /* hiệu ứng chuyển màu */
+}
+
+nav > div > ul > li > a:hover {
+    background-color: white;
+    color: rgb(230, 16, 137);
+}
+
+/* Phần chính */
+section {
+    display: flex; /* Sử dụng Flexbox để dễ dàng quản lý bố cục */
+    padding: 20px;
+    flex-grow: 1; /* Để section chiếm hết không gian còn lại */
+}
+
+/* Nội dung chính */
+section {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+article {
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+aside {
+    flex: 25%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cấu trúc các content-box trong article và aside */
+.content-box {
+    margin-bottom: 30px;
+    overflow: hidden; /* Để tránh tràn nội dung khi dùng float */
+}
+
+.content-box img {
+    float: left;
+    margin-right: 20px;
+    width: 300px;
+    height: auto;
+}
+.hinh-container {
+    display: flex; /* Bố trí các hình ngang */
+    justify-content: space-around; /* Căn giữa khoảng cách giữa các hình */
+    margin: 20px 0; /* Khoảng cách trên và dưới cho container */
+}
+
+.hinh {
+    text-align: center; /* Canh giữa nội dung trong mỗi hình */
+    flex: 1; /* Cho phép các hình có kích thước bằng nhau */
+    margin: 0 10px; /* Khoảng cách giữa các hình */
+}
+
+.hinh img {
+    width: 150px; /* Kích thước hình ảnh */
+    height: auto; /* Giữ tỷ lệ hình ảnh */
+    margin-bottom: 5px; /* Khoảng cách dưới hình ảnh */
+}
+
+.hinh p {
+    font-size: 16px; /* Kích thước văn bản */
+    margin: 0; /* Xóa khoảng cách mặc định */
+}
+.content-box h2 {
+    font-size: 24px;
+    margin-top: 0;
+    color:#008080;
+}
+
+.content-box p {
+    font-size: 18px;
+    text-align: justify;
+    overflow: hidden; /* Tránh tràn */
+    line-height: 1.5; /* Tăng khoảng cách dòng */
+}
+
+/* Sidebar (aside) */
+aside {
+    flex: 30%; /* Chiếm 30% không gian của section */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+aside .content-box {
+    margin-bottom: 20px; /* Thêm khoảng cách giữa các box */
+}
+
+aside .content-box h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #0080c0; /* Màu tiêu đề */
+}
+
+aside .contents ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside .contents ul li {
+    padding: 5px 0;
+}
+
+aside .contents ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+aside .contents ul li a:hover {
+    color: white;
+    background-color: black;
+}
+
+aside .contents h3 {
+	color:red;
+	text-align:center;
+}
+
+aside .contents .banner-ads img {
+    width:100%;
+}
+
+/* Footer */
+footer {
+    background-color: #0080c0;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Để footer không bị cố định */
+    width: 100%;
+    margin-top: auto; /* Đẩy footer xuống dưới */
+}
